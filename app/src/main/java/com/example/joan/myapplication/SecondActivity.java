@@ -23,9 +23,10 @@ public class SecondActivity extends Activity {
         setContentView(R.layout.second_activity);
 
         if(getIntent().getExtras() != null && getIntent().getExtras().containsKey("date")) {
-            TextView lblMensajeRecibido = findViewById(R.id.lblMensajeRecibido);
+            /*TextView lblMensajeRecibido = findViewById(R.id.lblMensajeRecibido);
             String fecha = getIntent().getExtras().getString("date");
-            lblMensajeRecibido.setText(fecha);
+            lblMensajeRecibido.setText(fecha);*/
+            ((TextView)findViewById(R.id.lblMensajeRecibido)).setText(getIntent().getExtras().getString("date"));
         }
 
         Button btnDevolverResultado = findViewById(R.id.btnDevolverResultado);
